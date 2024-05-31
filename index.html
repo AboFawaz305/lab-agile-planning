@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Counter service</title>
+	<link href="css/style.css" rel="stylesheet">
+	<script defer>
+		const value = document.getElementById("counter-value")
+		if (!value)
+			console.log("counter not found")
+
+		function increment() {
+			old_value = +value.innerText
+			value.innerText = old_value++
+		}
+	</script>
+</head>
+
+<body>
+	<div>Current value :<span id="counter-value">0</span></div>
+	<button type="button" onclick="increment()">Increment</button>
+
+</body>
+
+</html>
